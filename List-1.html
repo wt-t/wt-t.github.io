@@ -11,17 +11,8 @@
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
             crossorigin="anonymous">
         <script defer src="./todo-app.js"></script>
-        <script>
-            object = [
-            {
-                name: 'placeholder for a complete task!',
-                done: true,
-            },
-            {
-                name: 'placeholder for an uncomplete task!',
-                done: false,
-            },
-            ];
+        <script defer>
+            object = [];
             let storedList1 = localStorage.getItem('storedList1');
             let parcedList1 = JSON.parse(storedList1);
             if (storedList1 === null) {
