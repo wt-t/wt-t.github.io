@@ -64,8 +64,15 @@
     }
 
     function createTodoApp (container, title = 'TODO List', RecivedParcedList = [], key) { 
+        let todoAppTitle = crateAppTitle(title);
+        let todoItemForm = createTodoItemForm();
+        let todoList = createTodoList();
+      
+        container.append(todoAppTitle);
+        container.append(todoItemForm.form);
+        container.append(todoList);
+        
         let CurrentStoredList
-
 
         switch (key) {
             case 0:
@@ -90,14 +97,7 @@
 
 
 
-
-        let todoAppTitle = crateAppTitle(title);
-        let todoItemForm = createTodoItemForm();
-        let todoList = createTodoList();
         
-        container.append(todoAppTitle);
-        container.append(todoItemForm.form);
-        container.append(todoList);
         
         function createParcedItems () {    
             for (i = 0; i < parcedList.length; i++) {
