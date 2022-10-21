@@ -78,27 +78,17 @@
             case 0:
             CurrentStoredList = 'storedList';
             parcedList = RecivedParcedList;
-            console.log('key: ', key)
-            console.log(parcedList)
             break;
             case 1:
             CurrentStoredList = 'storedList1';
             parcedList = RecivedParcedList;
-            console.log('key: ', key)
-            console.log(parcedList)
             break;
             case 2:
             CurrentStoredList = 'storedList2';
             parcedList = RecivedParcedList;
-            console.log('key: ', key)
-            console.log(parcedList)
             break;
         }
 
-
-
-        
-        
         function createParcedItems () {    
             for (i = 0; i < parcedList.length; i++) {
                 
@@ -107,17 +97,13 @@
                 if (parcedList[i].done === true) testItem.item.classList.add('list-group-item-success');
                 testItem.item.setAttribute('id', i);
                 let id = testItem.item.getAttribute('id');
-                console.log(id);
-                console.log(parcedList[id]);
 
                 todoList.append(testItem.item);
                 
                 testItem.doneButton.addEventListener('click', function () {
                     testItem.item.classList.toggle('list-group-item-success');
                     let doneState = testItem.item.classList.contains('list-group-item-success');
-                    console.log(doneState);
                     parcedList[id].done = doneState;
-                    console.log(parcedList);
                     localStorage.setItem(CurrentStoredList, JSON.stringify(parcedList));
                 });
                 testItem.deleteButton.addEventListener('click', function () {
@@ -129,7 +115,6 @@
                 });
             };
         }; createParcedItems();
-            
 
         let submitButton = document.querySelector('.submit-button');
         let inputField = document.querySelector('.input');
@@ -186,4 +171,3 @@
 
     window.createTodoApp = createTodoApp;
 })();
-
