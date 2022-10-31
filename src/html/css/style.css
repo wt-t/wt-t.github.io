@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(103, 148, 176);
+}
+
+img {
+    width: 100px;
+}
+
+@keyframes gameOver-fadeIn {
+    0%   {}
+
+    50% {}
+
+    100% {}
+  }
+
+@keyframes fadeIt-n-scaleIt {
+    0%   { background-color: lightgoldenrodyellow; 
+           transform: rotateY(180deg) scale(1.0); }
+
+    50% { transform: rotateY(180deg) scale(1.1); }
+
+    100% { background-color: #c2ff97; 
+           transform: rotateY(180deg) scale(1.0); }
+}
+
+.card-game {
+    margin: auto;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .2s;
+}
+
+.card:active {
+    transform: scale(.95);
+    transition: transform .2s;
+}
+
+.card.isFlipped {
+    transform: rotateY(180deg);
+}
+
+.front-svg {
+    fill-opacity: 15%;
+}
+
+.front-face, 
+.back-face {
+    border-radius: 10px;
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back-face {
+    background-color: lightgoldenrodyellow;
+    transform: rotateY(180deg);
+}
+
+.game-over-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.game-over-text {
+    font-family: sans-serif;
+    color: azure;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.restart-button {
+    font-family: sans-serif;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    outline: none;
+    background-color: aquamarine;
+}
+
+.flipAnim > * {
+    border-radius: 10px;
+    animation: fadeIt-n-scaleIt .25s ease-in; 
+    background-color: #c2ff97;
+}
+
+.block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
