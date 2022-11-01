@@ -121,7 +121,7 @@
         
         submitButton.disabled = true;
         
-        inputField.addEventListener("input", function stateHandle () {
+        inputField.addEventListener("change", function stateHandle () {
             if (inputField.value.length) {
                 submitButton.disabled = false;
             } else {
