@@ -64,31 +64,31 @@ function onPointerMove( event ) {
 
           switch (intersects[i].object.name) {
             case 'button1':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button2':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button3':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button4':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button5':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button6':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button7':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button8':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             case 'button9':
-              INTERSECTED.material.emissive.setHex( 0xaa0000 );
+              INTERSECTED.material.emissive.setHex( 0xaaaaaa );
               return
             default:
               return 
